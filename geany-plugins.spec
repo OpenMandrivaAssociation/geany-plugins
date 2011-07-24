@@ -18,7 +18,7 @@ License:        GPLv2+
 URL:            http://plugins.geany.org/
 Source0:        http://plugins.geany.org/geany-plugins/geany-plugins-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires:	geany-devel >= %{req_geany_ver}
+BuildRequires:	geany >= %{req_geany_ver}
 BuildRequires:	gettext
 BuildRequires:	pkgconfig
 BuildRequires:	intltool
@@ -26,7 +26,6 @@ BuildRequires:  lua-devel
 BuildRequires:	enchant-devel
 BuildRequires:	gtkspell-devel
 BuildRequires:	ctpl
-Requires:	geany >= %{req_geany_ver}
 Obsoletes:      geanygdb
 
 %description
