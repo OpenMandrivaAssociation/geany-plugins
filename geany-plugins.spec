@@ -3,7 +3,7 @@ Name:           geany-plugins
 Version:        0.20
 Release:        %mkrel 1
 
-Group:          Development/Tools
+Group:          Development/GNOME and GTK+
 License:        GPLv2+ ; GPLv3+
 Summary:        A collection of different plugins for Geany
 Url:            http://plugins.geany.org/
