@@ -10,7 +10,7 @@ Url:            http://plugins.geany.org/
 Source0:        http://plugins.geany.org/geany-plugins/geany-plugins-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
-BuildRequires:	geany >= 0.29
+BuildRequires:	geany >= 0.20
 BuildRequires:  gettext intltool pkgconfig
 BuildRequires:  lua-devel enchant-devel gtkspell-devel
 Requires:       lua
