@@ -13,7 +13,7 @@ Name:           geany-plugins
 Version:        %{version}
 Release:        %mkrel %{release}
 Summary:        Plugins for Geany
-Group:          Development/Tools
+Group:          Development/Other
 License:        GPLv2+
 URL:            http://plugins.geany.org/
 Source0:        http://plugins.geany.org/geany-plugins/geany-plugins-%{version}.tar.gz
