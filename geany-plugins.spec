@@ -1,7 +1,7 @@
 %global geany_plug_docdir %{_defaultdocdir}/%{name}
 Name:           geany-plugins
 Version:        0.20
-Release:        %mkrel 1
+Release:        %mkrel 2
 
 Group:          Development/GNOME and GTK+
 License:        GPLv2+ ; GPLv3+
