@@ -9,6 +9,7 @@ Summary:        A collection of different plugins for Geany
 Url:            http://plugins.geany.org/
 Source0:        http://plugins.geany.org/geany-plugins/geany-plugins-%{version}.tar.bz2
 
+BuildRequires:	intltool >= 0.35.0
 BuildRequires:  lua-devel enchant-devel gtkspell-devel
 BuildRequires:	geany-devel >= %{version}
 Requires:       lua
