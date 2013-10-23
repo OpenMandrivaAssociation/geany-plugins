@@ -1,6 +1,7 @@
 %global geany_plug_docdir %{_defaultdocdir}/%{name}
+
 Name:		geany-plugins
-Version:	0.20
+Version:	1.23
 Release:	2
 
 Group:		Development/GNOME and GTK+
@@ -56,8 +57,8 @@ plugins:
 %setup -q
 
 %build
-%configure --docdir=%{geany_plug_docdir}
-%make
+%configure2_5x --docdir=%{geany_plug_docdir}
+make
 
 
 %install
@@ -70,6 +71,7 @@ plugins:
 %if "%{_libdir}" != "%{_libexecdir}"
 %{_libexecdir}/geany-plugins
 %endif
+%{_iconsdir}/hicolor/16x16/apps/*
 %{_libdir}/geany-plugins
 %{_libdir}/geany/*
 %{_datadir}/geany-plugins
