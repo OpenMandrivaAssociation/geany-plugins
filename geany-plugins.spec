@@ -1,23 +1,21 @@
 %global geany_plug_docdir %{_defaultdocdir}/%{name}
 
-Name:		geany-plugins
-Version:	1.23
-Release:	2
-
-Group:		Development/GNOME and GTK+
-License:	GPLv2+ ; GPLv3+
 Summary:	A collection of different plugins for Geany
+Name:		geany-plugins
+Version:	1.24
+Release:	1
+License:	GPLv2+ and GPLv3+
+Group:		Development/GNOME and GTK+
 Url:		http://plugins.geany.org/
-Source0:	http://plugins.geany.org/geany-plugins/geany-plugins-%{version}.tar.bz2
+Source0:	http://plugins.geany.org/geany-plugins/%{name}-%{version}.tar.bz2
 BuildRequires:	gettext
 BuildRequires:	intltool
-BuildRequires:	lua-devel
-BuildRequires:	enchant-devel
-BuildRequires:	gtkspell-devel
-BuildRequires:	pkgconfig(geany) >= 0.20
+BuildRequires:	pkgconfig(enchant)
+BuildRequires:	pkgconfig(geany)
+BuildRequires:	pkgconfig(gtkspell-2.0)
+BuildRequires:	pkgconfig(lua) < 5.2
 Requires:	geany
-Requires:	lua
-
+Requires:	lua5.1
 
 %description
 Geany-Plugins is a collection of different plugins for Geany,
@@ -53,19 +51,6 @@ plugins:
               with the spell check library Enchant
 - Treebrowser
 
-%prep
-%setup -q
-
-%build
-%configure2_5x --docdir=%{geany_plug_docdir}
-make
-
-
-%install
-%makeinstall_std
-
-%find_lang %{name}
-
 %files -f %{name}.lang
 %doc NEWS README
 %if "%{_libdir}" != "%{_libexecdir}"
@@ -75,4 +60,18 @@ make
 %{_libdir}/geany-plugins
 %{_libdir}/geany/*
 %{_datadir}/geany-plugins
+%{_datadir}/geany
 
+#----------------------------------------------------------------------------
+
+%prep
+%setup -q
+
+%build
+%configure2_5x --docdir=%{geany_plug_docdir}
+make
+
+%install
+%makeinstall_std
+
+%find_lang %{name}
