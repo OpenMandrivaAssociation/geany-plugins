@@ -2,8 +2,8 @@
 
 Summary:	A collection of different plugins for Geany
 Name:		geany-plugins
-Version:	1.24
-Release:	2
+Version:	1.27
+Release:	1
 License:	GPLv2+ and GPLv3+
 Group:		Development/GNOME and GTK+
 Url:		http://plugins.geany.org/
