@@ -1,4 +1,5 @@
 %global geany_plug_docdir %{_defaultdocdir}/%{name}
+%define _disable_rebuild_configure 1
 
 Summary:	A collection of different plugins for Geany
 Name:		geany-plugins
@@ -14,6 +15,7 @@ BuildRequires:	pkgconfig(enchant)
 BuildRequires:	pkgconfig(geany)
 BuildRequires:	pkgconfig(gtkspell-2.0)
 BuildRequires:	pkgconfig(lua) < 5.2
+BuildRequires:	pkgconfig(python2)
 Requires:	geany
 Requires:	lua5.1
 
@@ -53,14 +55,10 @@ plugins:
 
 %files -f %{name}.lang
 %doc NEWS README
-%if "%{_libdir}" != "%{_libexecdir}"
-%{_libexecdir}/geany-plugins
-%endif
 %{_iconsdir}/hicolor/16x16/apps/*
 %{_libdir}/geany-plugins
 %{_libdir}/geany/*
 %{_datadir}/geany-plugins
-%{_datadir}/geany
 
 #----------------------------------------------------------------------------
 
@@ -68,6 +66,8 @@ plugins:
 %setup -q
 
 %build
+export PYTHON=%__python2
+
 %configure2_5x --docdir=%{geany_plug_docdir}
 make
 
