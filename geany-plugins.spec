@@ -66,8 +66,6 @@ plugins:
 %setup -q
 
 %build
-export PYTHON=%__python2
-
 %configure2_5x --docdir=%{geany_plug_docdir}
 make
 
