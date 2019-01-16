@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   geany-plugins-1.27.tar.bz2: 081f59553e7b0518b8db6f44985fc07f6dc11283
+sources:
+  geany-plugins-1.34.tar.bz2: d7097fac8f0b9c5b8e6dd9983798d9477644f0ac

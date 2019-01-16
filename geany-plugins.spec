@@ -3,7 +3,7 @@
 
 Summary:	A collection of different plugins for Geany
 Name:		geany-plugins
-Version:	1.27
+Version:	1.34
 Release:	1
 License:	GPLv2+ and GPLv3+
 Group:		Development/GNOME and GTK+
@@ -66,7 +66,7 @@ plugins:
 %setup -q
 
 %build
-export PYTHON=%__python2
+export PYTHON=python2
 
 %configure2_5x --docdir=%{geany_plug_docdir}
 make
