@@ -55,9 +55,7 @@ plugins:
 - Treebrowser
 
 %files -f %{name}.lang
-%doc NEWS README
 %doc %{_datadir}/doc/geany-plugins/
-#{_iconsdir}/hicolor/16x16/apps/*
 %{_libdir}/geany-plugins
 %{_libdir}/geany/*
 %{_libdir}/libgeanypluginutils.so*
