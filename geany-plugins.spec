@@ -56,7 +56,7 @@ plugins:
 
 %files -f %{name}.lang
 %doc NEWS README
-%{_iconsdir}/hicolor/16x16/apps/*
+#{_iconsdir}/hicolor/16x16/apps/*
 %{_libdir}/geany-plugins
 %{_libdir}/geany/*
 %{_datadir}/geany-plugins
@@ -64,7 +64,7 @@ plugins:
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure --docdir=%{geany_plug_docdir}
