@@ -3,7 +3,7 @@
 
 Summary:	A collection of different plugins for Geany
 Name:		geany-plugins
-Version:	1.27
+Version:	2.0
 Release:	1
 License:	GPLv2+ and GPLv3+
 Group:		Development/GNOME and GTK+
@@ -15,7 +15,8 @@ BuildRequires:	pkgconfig(enchant)
 BuildRequires:	pkgconfig(geany)
 BuildRequires:	pkgconfig(gtkspell-2.0)
 BuildRequires:	pkgconfig(lua) < 5.2
-BuildRequires:	pkgconfig(python2)
+BuildRequires:	pkgconfig(python)
+BuildRequires:        pkgconfig(gtk+-3.0)
 Requires:	geany
 Requires:	lua5.1
 
@@ -66,12 +67,10 @@ plugins:
 %setup -q
 
 %build
-export PYTHON=%__python2
-
-%configure2_5x --docdir=%{geany_plug_docdir}
-make
+%configure --docdir=%{geany_plug_docdir}
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %find_lang %{name}
