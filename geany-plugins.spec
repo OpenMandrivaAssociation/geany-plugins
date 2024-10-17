@@ -7,7 +7,7 @@ Version:	2.0
 Release:	1
 License:	GPLv2+ and GPLv3+
 Group:		Development/GNOME and GTK+
-Url:		http://plugins.geany.org/
+Url:		https://plugins.geany.org/
 Source0:	http://plugins.geany.org/geany-plugins/%{name}-%{version}.tar.bz2
 BuildRequires:	gettext
 BuildRequires:	intltool
