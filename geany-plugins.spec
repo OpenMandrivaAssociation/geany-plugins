@@ -9,6 +9,11 @@ License:	GPLv2+ and GPLv3+
 Group:		Development/GNOME and GTK+
 Url:		https://plugins.geany.org/
 Source0:	http://plugins.geany.org/geany-plugins/%{name}-%{version}.tar.bz2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gettext
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(enchant)
